@@ -5,6 +5,13 @@ import reactRefresh from '@vitejs/plugin-react-refresh'
  * @type { import('vite').UserConfig }
  */
 export default {
+  build: {
+    rollupOptions: {
+      external: ["/src/main.jsx"]
+    }
+  }
+};
+export default {
   plugins: [reactRefresh()],
   server: {
     host: '0.0.0.0',
